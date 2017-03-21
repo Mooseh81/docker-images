@@ -8,32 +8,25 @@ LABEL org.freenas.interactive="false" \
       org.freenas.web-ui-port="5075" \
       org.freenas.web-ui-path="" \
       org.freenas.port-mappings="5075:5075/tcp" \
-      org.freenas.volumes="[						\
-          {								\
-              \"name\": \"/config\",					\
-              \"descr\": \"Where hydra should store config files\"		\
-          },								\								\
-          {								\
-              \"name\": \"/downloads\",					\
-              \"descr\": \"NZB download folder\"			\
-          }								\
+      org.freenas.volumes="[  \
+          {  \
+              \"name\": \"/config\",  \
+              \"descr\": \"Where hydra should store config files\"  \
+          },  \
+          {  
+              \"name\": \"/downloads\",  
+              \"descr\": \"NZB download folder\"  
+          }  
       ]" \
-       org.freenas.settings="[ 						                        \
-          {								                                    \
-              \"env\": \"PUID\",					                              \
-              \"descr\": \"USER ID\",				\
-              \"optional\": true					                              \
-          },								                              \
-          {								                                    \
-              \"env\": \"PGID\",					                              \
-              \"descr\": \"GROUP ID\",				\
-              \"optional\": true					                              \
-          }                                                                               \
-      ]"                            \  
-      org.freenas.static-volumes="[					\
-          {								\
-              \"container_path\": \"/dev/rtc\",				\
-              \"host_path\": \"/dev/rtc\",				\
-              \"readonly\": \"true\"					\
-          }								\
-      ]" 
+       org.freenas.settings="[  
+          {  
+              \"env\": \"PUID\",  
+              \"descr\": \"USER ID\",  
+              \"optional\": true  
+          },  \
+          {  \
+              \"env\": \"PGID\",  \
+              \"descr\": \"GROUP ID\",  \
+              \"optional\": true  \
+          }  \
+      ]"  \
