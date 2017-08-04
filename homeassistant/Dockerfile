@@ -1,4 +1,10 @@
 FROM homeassistant/home-assistant:latest
+
+RUN apt-get update
+RUN curl -sL https://deb.nodesource.com/setup_8.x | bash -
+RUN apt-get install -y nodejs
+RUN npm install ps4-waker -g
+
 LABEL org.freenas.interactive="false"                                         \
       org.freenas.version="1"                                                 \
       org.freenas.upgradeable="true"                                         \
