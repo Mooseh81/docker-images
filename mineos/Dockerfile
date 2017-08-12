@@ -13,7 +13,7 @@ LABEL org.freenas.interactive="false" \
               \"name\": \"/var/games/minecraft\",                                 \
               \"descr\": \Minecraft Server location\"                        \    
           }                                                             \
-      ]"            
+      ]"            \
       org.freenas.settings="[						\
           {								\
               \"env\": \"PASSWORD\",					\
