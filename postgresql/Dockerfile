@@ -18,7 +18,7 @@ RUN cd /tmp \
     && yum install -y postgresql96-server.x86_64 postgresql96-contrib.x86_64 postgresql96-devel.x86_64 psmisc
 
 # make the sample config easier to munge (and "correct by default")
-RUN sed -ri "s!^#?(listen_addresses)\s*=\s*\S+.*!\1 = '*'!" /usr/share/postgresql/postgresql.conf.sample
+#RUN sed -ri "s!^#?(listen_addresses)\s*=\s*\S+.*!\1 = '*'!" /usr/share/postgresql/postgresql.conf.sample
 
 RUN mkdir -p /var/run/postgresql && chown -R postgres:postgres /var/run/postgresql && chmod g+s /var/run/postgresql
 
