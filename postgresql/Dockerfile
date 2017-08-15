@@ -15,10 +15,7 @@ rm -f /lib/systemd/system/anaconda.target.wants/*;
 RUN cd /tmp \
     && curl -O https://download.postgresql.org/pub/repos/yum/9.6/redhat/rhel-7-x86_64/pgdg-centos96-9.6-3.noarch.rpm \
     && rpm -ivh pgdg-centos96-9.6-3.noarch.rpm \
-    && yum install -y postgresql96-server.x86_64 postgresql96-contrib.x86_64 postgresql96-devel.x86_64 psmisc \
-    && mkdir /data/9.6 \
-    && chown postgres:postgres /data \
-    && chmod 700 /data
+    && yum install -y postgresql96-server.x86_64 postgresql96-contrib.x86_64 postgresql96-devel.x86_64 psmisc
 
 # make the sample config easier to munge (and "correct by default")
 RUN sed -ri "s!^#?(listen_addresses)\s*=\s*\S+.*!\1 = '*'!" /usr/share/postgresql/postgresql.conf.sample
