@@ -4,7 +4,6 @@ RUN apt-get update
 RUN curl -sL https://deb.nodesource.com/setup_8.x | bash -
 RUN apt-get install -y nodejs
 RUN apt-get install -y telnet
-RUN apt-get install -y postgresql-server-dev-9.4
 RUN npm install ps4-waker -g
 
 LABEL org.freenas.interactive="false"                                         \
