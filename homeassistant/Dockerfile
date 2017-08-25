@@ -7,9 +7,10 @@ RUN apt-get install -y telnet
 RUN npm install ps4-waker -g
 RUN apt-get install -y libpcap-dev
 RUN apt-get install -y git
-RUN cp config/dasher /etc/init.d/dasher
+RUN cp /config/dasher/config/dasher /etc/init.d/dasher
 RUN chmod 755 /etc/init.d/dasher
 RUN update-rc.d dasher defaults
+RUN service dasher start
 
 LABEL org.freenas.interactive="false"                                         \
       org.freenas.version="1"                                                 \
