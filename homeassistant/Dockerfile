@@ -5,6 +5,11 @@ RUN curl -sL https://deb.nodesource.com/setup_8.x | bash -
 RUN apt-get install -y nodejs
 RUN apt-get install -y telnet
 RUN npm install ps4-waker -g
+RUN apt-get install -y libpcap-dev
+RUN apt-get install -y git
+RUN cp config/dasher /etc/init.d/dasher
+RUN chmod 755 /etc/init.d/dasher
+RUN update-rc.d dasher defaults
 
 LABEL org.freenas.interactive="false"                                         \
       org.freenas.version="1"                                                 \
