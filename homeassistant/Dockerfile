@@ -11,6 +11,7 @@ RUN curl https://raw.githubusercontent.com/Mooseh81/home-assistant/master/dasher
 RUN chmod 755 /etc/init.d/dasher
 RUN update-rc.d dasher defaults
 RUN service dasher start
+RUN systemctl enable dasher
 
 LABEL org.freenas.interactive="false"                                         \
       org.freenas.version="1"                                                 \
