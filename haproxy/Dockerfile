@@ -1,4 +1,5 @@
 FROM million12/haproxy:latest
+RUN yum install -y bind-utils, which, httpd
 LABEL org.freenas.interactive="false"                                         \
       org.freenas.version="1"                                                 \
       org.freenas.upgradeable="false"                                         \
