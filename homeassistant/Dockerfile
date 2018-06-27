@@ -7,6 +7,7 @@ RUN apt-get install -y telnet
 RUN npm install ps4-waker -g
 RUN apt-get install -y libpcap-dev
 RUN apt-get install -y git
+RUN apt-get install systemd
 RUN curl https://raw.githubusercontent.com/Mooseh81/home-assistant/master/dasherinit -o /etc/init.d/dasher
 RUN chmod 755 /etc/init.d/dasher
 RUN update-rc.d dasher defaults
